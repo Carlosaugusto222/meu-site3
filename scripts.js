@@ -10,6 +10,11 @@ function colocarNaTela(dados) {
     "https://openweathermap.org/img/wn/" + dados.weather[0].icon + ".png";
   document.querySelector(".umidade").innerHTML =
     "Umidade " + dados.main.humidity + "%";
+  document.addEventListener('keypress', function(e){
+       if(e.which == 13){
+          console.log('a tecla enter foi pressionada');
+       }
+    }, false);
 }
 
 async function buscarCidade(cidade) {
