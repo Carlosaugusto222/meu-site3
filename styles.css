@@ -30,6 +30,22 @@ body {
     padding: 20px;
 }
 
+.caixa-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
 .lupa {
     height: 20px;
     width: 20px;
