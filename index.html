@@ -70,16 +70,16 @@
            ==================================================================== -->
       <header class="text-center pt-3 pb-1 space-y-3.5 reveal-on-scroll">
         
-        <!-- 1. Logo Circular Samuel KIDS (Ajuste técnico obrigatório sem borda quadrada) -->
-        <div class="relative inline-block">
-          <!-- Brilho suave ao redor da logo -->
-          <div class="absolute inset-0 rounded-full bg-[#88A886]/20 blur-md scale-105"></div>
+        <!-- 1. Logo Circular Samuel KIDS (Com neon pulsante) -->
+        <div class="logo-neon-wrapper relative inline-block group" title="Samuel KIDS">
+          <!-- Brilho neon pulsante em halo ao redor da logo -->
+          <div class="logo-neon-halo"></div>
           
-          <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-lg border-4 border-[#F2E9DC] mx-auto bg-white relative">
+          <div class="logo-neon-ring w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden shadow-xl border-4 mx-auto bg-white relative">
             <img 
               src="./images/logo-samuel-kids.jpeg" 
               alt="Samuel KIDS - Moda Infantil" 
-              class="w-full h-full object-cover object-center scale-[1.04]"
+              class="w-full h-full object-cover object-center scale-[1.04] transition-transform duration-500 group-hover:scale-105"
               loading="eager"
             />
           </div>
@@ -165,16 +165,17 @@
         <div class="grid grid-cols-2 gap-3 sm:gap-4">
           
           <!-- CARD 1: Peça 1 (Menino camiseta laranja, bermuda estampada e pochete) -->
-          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between glow-card">
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
             <div>
-              <div class="relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
                 <img 
                   src="./images/peca-1-menino-laranja.jpeg" 
                   alt="Look infantil masculino com camiseta laranja, bermuda estampada e pochete - Samuel KIDS" 
-                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full transition-transform duration-500 hover:scale-105"
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
                   loading="lazy"
                 />
-                <span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#1E4631]/85 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#1E4631]/85 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
                   Destaque
                 </span>
               </div>
@@ -185,7 +186,7 @@
               href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] hover:bg-[#163524] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
             >
               <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
@@ -195,16 +196,17 @@
           </article>
 
           <!-- CARD 2: Peça 2 (Menina com raquete de tênis e conjunto polo verde-menta) -->
-          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between glow-card">
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
             <div>
-              <div class="relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
                 <img 
                   src="./images/peca-2-menina-verde.jpeg" 
                   alt="Conjunto infantil feminino polo verde-menta e raquete de tênis - Samuel KIDS" 
-                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full transition-transform duration-500 hover:scale-105"
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
                   loading="lazy"
                 />
-                <span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#88A886]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#88A886]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
                   Coleção
                 </span>
               </div>
@@ -215,7 +217,7 @@
               href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] hover:bg-[#163524] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
             >
               <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
@@ -225,16 +227,17 @@
           </article>
 
           <!-- CARD 3: Peça 3 (Menino polo bege detalhes azul e bermuda azul) -->
-          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between glow-card">
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
             <div>
-              <div class="relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
                 <img 
                   src="./images/peca-3-menino-polo.jpeg" 
                   alt="Conjunto masculino polo bege com detalhes azul claro e bermuda azul - Samuel KIDS" 
-                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full transition-transform duration-500 hover:scale-105"
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
                   loading="lazy"
                 />
-                <span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#4A90E2]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#4A90E2]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
                   Casual Chic
                 </span>
               </div>
@@ -245,7 +248,7 @@
               href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] hover:bg-[#163524] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
             >
               <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
@@ -255,16 +258,17 @@
           </article>
 
           <!-- CARD 4: Peça 4 (4 conjuntos femininos pastel com laço no ombro no cabide) -->
-          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between glow-card">
+          <article class="bg-white rounded-2xl p-2.5 sm:p-3 shadow-sm border border-[#F2E9DC] flex flex-col justify-between product-card group">
             <div>
-              <div class="relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
+              <div class="product-image-container relative overflow-hidden rounded-xl aspect-[4/5] w-full bg-[#FAF6F0] mb-2.5">
                 <img 
                   src="./images/peca-4-conjuntos-pastel.jpeg" 
                   alt="Conjuntos femininos em tons pastel com laço no ombro - Samuel KIDS" 
-                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full transition-transform duration-500 hover:scale-105"
+                  class="aspect-[4/5] object-cover rounded-2xl w-full h-full product-image"
                   loading="lazy"
                 />
-                <span class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#C86D3B]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
+                <div class="product-shine"></div>
+                <span class="product-badge absolute top-2 left-2 px-2 py-0.5 rounded-md bg-[#C86D3B]/90 backdrop-blur-sm text-[10px] font-bold text-white uppercase tracking-wider">
                   Encanto
                 </span>
               </div>
@@ -275,7 +279,7 @@
               href="https://wa.me/5581998486047?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20da%20Samuel%20KIDS%20e%20quero%20conhecer%20as%20pe%C3%A7as%20dispon%C3%ADveis!" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] hover:bg-[#163524] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
+              class="product-cta w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-2 bg-[#1E4631] text-white text-[11px] sm:text-xs font-bold rounded-xl shadow transition-all duration-200 active:scale-95 text-center leading-tight mt-1"
             >
               <svg class="w-3.5 h-3.5 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.568 1.849.88 2.796.88 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.109.005.253-.041.396.303.145.347.493 1.2.536 1.288.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.179.182-.077.357.101.174.453.748.971 1.21.668.596 1.232.78 1.406.868.174.087.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.174L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
