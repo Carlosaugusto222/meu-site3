@@ -1,34 +1,28 @@
-let chave = "cebcd482eda57fa9a6714c1c2ba91885";
+/**
+ * SAMUEL KIDS — Interações & Micro-animações da Vitrine
+ */
 
-function colocarNaTela(dados) {
-  console.log(dados);
+document.addEventListener('DOMContentLoaded', () => {
+  // Intersection Observer para animações suaves ao rolar a página
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
 
-  document.querySelector(".cidade").innerHTML = "Tempo em " + dados.name;
-  document.querySelector(".temp").innerHTML =
-    Math.floor(dados.main.temp) + "°C";
-  document.querySelector(".icone").src =
-    "https://openweathermap.org/img/wn/" + dados.weather[0].icon + ".png";
-  document.querySelector(".umidade").innerHTML =
-    "Umidade " + dados.main.humidity + "%";
-  document.addEventListener('keypress', function(e){
-       if(e.which == 13){
-          console.log('a tecla enter foi pressionada');
-       }
-    }, false);
-}
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
 
-async function buscarCidade(cidade) {
-  let dados = await fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-      cidade +
-      "&appid=cebcd482eda57fa9a6714c1c2ba91885&units=metric"
-  ).then((resposta) => resposta.json());
-
-  colocarNaTela(dados);
-}
-
-function cliqueiNoBotao() {
-  let cidade = document.querySelector(".input-cidade").value;
-
-  buscarCidade(cidade);
-}
+    revealElements.forEach(el => observer.observe(el));
+  } else {
+    // Fallback para navegadores antigos
+    revealElements.forEach(el => el.classList.add('is-visible'));
+  }
+});
